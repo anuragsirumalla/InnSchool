@@ -7,7 +7,19 @@ namespace InnSchool
     public class AssociateProfessor
     {
         public List<Professor> AssociateProfessors;
-        private int Id = 100000;
+        private int id;
+        
+        private int Id
+        {
+            get
+            {
+                return id;
+            }
+            set 
+            {
+                id = 10000;
+            }
+        }
         public AssociateProfessor()
         {
             AssociateProfessors = new List<Professor>();
@@ -31,43 +43,31 @@ namespace InnSchool
 
             }
         }
-        public IEnumerable<Professor> SalaryUpdate()
-        {
-            AssociateProfessors.Where(professor => professor.salary <= 2000).ToList().ForEach(professor => professor.salary = professor.salary + 50000);
-            var Assistants = from professor in AssociateProfessors
-                             select professor;
-            return Assistants;
 
-        }
-        public void ShowSalaryUpdate()
+        private void AddAssociateProfressors()
         {
-            Console.WriteLine("\n\nUPDATED SALARIES OF ASSOCIATE PROFESSORS");
-            var associates = SalaryUpdate();
-            if (AssociateProfessors.ToList().Count > 0)
+            String Name;
+            long salary;
+            try
             {
-                foreach (var professor in associates)
-                {
-                    Console.WriteLine(professor.id + "   " + professor.Name + "   " + professor.salary);
-                }
+                Console.Write("Enter name : ");
+                Name = Console.ReadLine();
+                Console.Write("Enter salary : ");
+                salary = Convert.ToInt64(Console.ReadLine());
+                Professor associate = new Professor(Name, ++Id, "AssociateProfessor", salary);
+                SetProfessorDetails(associate);
             }
-            else
+            catch (FormatException)
             {
-                Console.WriteLine("No associates professors.");
+                Console.WriteLine("Please, Enter details properly!  ");
             }
         }
-        void ShowSalary()
+        public void SetProfessorDetails(Professor NewAssistantProfessor)
         {
-            Console.WriteLine("\n\nSALARIES OF ASSOCIATE PROFESSORS");
-            if (AssociateProfessors.ToList().Count > 0)
-            {
-                foreach (var professor in AssociateProfessors)
-                {
-                    Console.WriteLine(professor.id + "   " + professor.Name + "   " + professor.salary);
-                }
-            }
-            else
-                Console.WriteLine("No associates professors.");
+            AssociateProfessors.Add(NewAssistantProfessor);
+            Console.WriteLine($"Hey! { NewAssistantProfessor.Name } , you are Added succesfully");
         }
+
         private void Operations()
         {
             Console.WriteLine("1.Show salary   2.Update Salary ");
@@ -94,28 +94,44 @@ namespace InnSchool
             }
         }
 
-
-        public void SetProfessorDetails(Professor NewAssistantProfessor)
+        void ShowSalary()
         {
-            AssociateProfessors.Add(NewAssistantProfessor);
-            Console.WriteLine($"Hey! { NewAssistantProfessor.Name } , you are Added succesfully");
-        }
-        private void AddAssociateProfressors()
-        {
-            String Name;
-            long salary;
-            try
+            Console.WriteLine("\n\nSALARIES OF ASSOCIATE PROFESSORS");
+            if (AssociateProfessors.ToList().Count > 0)
             {
-                Console.Write("Enter name : ");
-                Name = Console.ReadLine();
-                Console.Write("Enter salary : ");
-                salary = Convert.ToInt64(Console.ReadLine());
-                Professor associate = new Professor(Name, ++Id, "AssociateProfessor", salary);
-                SetProfessorDetails(associate);
+                foreach (var professor in AssociateProfessors)
+                {
+                    Console.WriteLine(professor.id + "   " + professor.Name + "   " + professor.salary);
+                }
             }
-            catch (FormatException)
+            else
             {
-                Console.WriteLine("Please, Enter details properly!  ");
+                Console.WriteLine("No associates professors.");
+            }
+        }
+
+        public IEnumerable<Professor> SalaryUpdate()
+        {
+            AssociateProfessors.Where(professor => professor.salary <= 2000).ToList().ForEach(professor => professor.salary = professor.salary + 50000);
+            var Assistants = from professor in AssociateProfessors
+                             select professor;
+            return Assistants;
+
+        }
+        public void ShowSalaryUpdate()
+        {
+            Console.WriteLine("\n\nUPDATED SALARIES OF ASSOCIATE PROFESSORS");
+            var associates = SalaryUpdate();
+            if (AssociateProfessors.ToList().Count > 0)
+            {
+                foreach (var professor in associates)
+                {
+                    Console.WriteLine(professor.id + "   " + professor.Name + "   " + professor.salary);
+                }
+            }
+            else
+            {
+                Console.WriteLine("No associates professors.");
             }
         }
     }

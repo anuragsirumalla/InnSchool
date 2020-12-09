@@ -10,7 +10,7 @@ namespace InnSchool
             string FinalStatus = "start";
             AssistantProfessor assistant = new AssistantProfessor();
             AssociateProfessor associate = new AssociateProfessor();
-            Console.WriteLine("\n\n\n                   InnSchool              ");
+            Console.WriteLine("\n\n\n                   InnSchool                 ");
             while (FinalStatus.Equals("start"))
             {
                 Console.WriteLine("\n1.Assistant Professors     2. Associate Professors      3.Exit");
