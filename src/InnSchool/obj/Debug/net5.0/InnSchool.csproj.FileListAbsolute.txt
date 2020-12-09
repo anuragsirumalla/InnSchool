@@ -1,0 +1,16 @@
+D:\innRoad\InnSchool\src\InnSchool\obj\Debug\net5.0\InnSchool.csprojAssemblyReference.cache
+D:\innRoad\InnSchool\src\InnSchool\obj\Debug\net5.0\InnSchool.GeneratedMSBuildEditorConfig.editorconfig
+D:\innRoad\InnSchool\src\InnSchool\obj\Debug\net5.0\InnSchool.AssemblyInfoInputs.cache
+D:\innRoad\InnSchool\src\InnSchool\obj\Debug\net5.0\InnSchool.AssemblyInfo.cs
+D:\innRoad\InnSchool\src\InnSchool\obj\Debug\net5.0\InnSchool.csproj.CoreCompileInputs.cache
+D:\innRoad\InnSchool\src\InnSchool\bin\Debug\net5.0\InnSchool.exe
+D:\innRoad\InnSchool\src\InnSchool\bin\Debug\net5.0\InnSchool.deps.json
+D:\innRoad\InnSchool\src\InnSchool\bin\Debug\net5.0\InnSchool.runtimeconfig.json
+D:\innRoad\InnSchool\src\InnSchool\bin\Debug\net5.0\InnSchool.runtimeconfig.dev.json
+D:\innRoad\InnSchool\src\InnSchool\bin\Debug\net5.0\InnSchool.dll
+D:\innRoad\InnSchool\src\InnSchool\bin\Debug\net5.0\ref\InnSchool.dll
+D:\innRoad\InnSchool\src\InnSchool\bin\Debug\net5.0\InnSchool.pdb
+D:\innRoad\InnSchool\src\InnSchool\obj\Debug\net5.0\InnSchool.dll
+D:\innRoad\InnSchool\src\InnSchool\obj\Debug\net5.0\ref\InnSchool.dll
+D:\innRoad\InnSchool\src\InnSchool\obj\Debug\net5.0\InnSchool.pdb
+D:\innRoad\InnSchool\src\InnSchool\obj\Debug\net5.0\InnSchool.genruntimeconfig.cache
